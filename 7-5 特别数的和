@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int check(int k)
+{
+int a=0;
+while(k>0)
+{
+if(k%10 ==2 ||k%10==0||k%10==1||k%10==9)
+{
+a=1;
+break;
+}
+k/=10;
+}
+return a;
+}
+int main()
+{
+    int x=0,n;
+    cin>>n;
+    for (int i=1;i <=n;i++)
+    {
+        if(check(i))
+            x +=i;
+    }
+    cout<<x<<endl;
+}
